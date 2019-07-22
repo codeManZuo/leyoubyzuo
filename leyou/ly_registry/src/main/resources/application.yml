@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: registry-center  #给出该微服务的名字
+server:
+  port: 10086  #设置该微服务的端口号
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka

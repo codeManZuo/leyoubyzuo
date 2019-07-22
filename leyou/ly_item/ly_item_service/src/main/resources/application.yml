@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: item_service
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springboot?serverTimezone=PRC
+    username: root
+    password: 1020
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mybatis-mapper/studentMapper.xml
+  type-aliases-package: zuo.pojo
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+server:
+  port: 8081
